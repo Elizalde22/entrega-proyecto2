@@ -1,0 +1,250 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(.././images/nuts.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/*-------------Header--------------*/
+
+.header {
+    position: fixed;
+    z-index: 10;
+}
+
+.header nav {
+    display: flex;
+    background-color: #80808070;
+    background: linear-gradient(#00000041, #00000054);
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    width: 100vw;
+    padding: 25px;
+    font-weight: 700;
+}
+
+.header nav ul li {
+    display: inline-block;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    margin: 20px;
+    color: white;
+}
+
+/*------------Main-------------*/
+
+.main-p {
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 400px 0;
+}
+
+.main-p div {
+    margin: 10px;
+    position: relative;
+    transition: 2s 1s ease;
+    animation-name: fade-in;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+
+.main-p div:hover {
+    background-color: #511557;
+}
+
+.main-p div h3 {
+    position: absolute;
+    bottom: 0;
+}
+
+.main-p h2 {
+    border: 2px dashed;
+}
+
+.main-p div a {
+    color: white;
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+.comprar {
+    font-size: 25px;
+    padding: 500px 0px 500px 25px;
+    color: #ffffff;
+}
+
+.comprar ul {
+    background-color: #12790eab;
+}
+
+.comprar p {
+    background-color: #12790eab;
+}
+
+.formulario {
+    color: white;
+    margin: 50px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-areas:
+        "gal1 gal1 gal1 gal1"
+        "gal2 gal2 gal3 gal3"
+        "gal4 gal4 gal4 gal5"
+        "gal6 gal6 gal6 gal6"
+    ;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.galeria img {
+    width: 100%;
+}
+
+.gal1 {
+    grid-area: gal1;
+}
+
+.gal2 {
+    grid-area: gal2;
+}
+
+.gal3 {
+    grid-area: gal3;
+}
+
+.gal4 {
+    grid-area: gal4;
+}
+
+.gal5 {
+    grid-area: gal5;
+}
+
+.gal6 {
+    grid-area: gal6;
+}
+
+.carousel-item h5{ 
+    color: #ffffff !important;
+}
+
+.carousel-item p{
+    color: #ffffff !important;
+}
+
+/*----formulario----*/
+
+.mb-3{
+    color: #ffffff !important;
+}
+/*------Footer-------*/
+
+.footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    color: white;
+    background-color: #105c10;
+}
+
+.footer a {
+    margin: 50px;
+    padding: 25px;
+}
+
+
+/*----Traslate----*/
+
+@keyframes fade-in {
+
+    0% {
+        transform: translateY(-150px)
+    }
+
+    100% {
+        transform: translateY(150px)
+    }
+}
+
+
+
+/*========Media queries=====*/
+
+
+@media screen and (max-width:1024px) {
+
+    .header h1 {
+        color: #00e600;
+    }
+
+    .header nav ul li a {
+        color: #00e600;
+    }
+
+    .main-p h2 {
+        color: #00e600;
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+
+    .header nav {
+        flex-direction: column;
+    }
+
+    .main-p {
+        flex-direction: column;
+        color: #00e600;
+        font-size: 12px;
+    }
+
+
+    .body {
+        background-position: center;
+    }
+
+    .galeria {
+        display: flex;
+        flex-direction: column;
+        padding-top: 110px;
+    }
+
+    .comprar{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .header nav ul li {
+        display: block;
+        align-items: center;
+    }
+
+    .main-p img {
+        width: 300px;
+        height: 300px;
+    }
+}
