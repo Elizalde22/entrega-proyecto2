@@ -117,11 +117,12 @@
 
 .galeria {
     display: grid;
+    grid-template-columns: auto;
     grid-template-areas:
         "gal1 gal1 gal1 gal1"
         "gal2 gal2 gal3 gal3"
-        "gal4 gal4 gal4 gal5"
-        "gal6 gal6 gal6 gal6"
+        "gal4 gal4 gal5 gal5"
+        "gal4 gal4 gal5 gal5"
     ;
     gap: 20px;
     height: 100%;
@@ -146,15 +147,14 @@
 
 .gal4 {
     grid-area: gal4;
+    
 }
 
 .gal5 {
     grid-area: gal5;
+    
 }
 
-.gal6 {
-    grid-area: gal6;
-}
 
 .carousel-item h5{ 
     color: #ffffff !important;
@@ -182,6 +182,16 @@
 .footer a {
     margin: 50px;
     padding: 25px;
+}
+
+/*----section card----*/
+
+.sectioncard{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    margin: 50px;
 }
 
 
@@ -245,6 +255,11 @@
 
     .comprar{
         font-size: 15px;
+    }
+
+    .sectioncard{
+        flex-direction: column !important;
+        align-items: center !important;
     }
 }
 
